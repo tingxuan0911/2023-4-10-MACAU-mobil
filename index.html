@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bookstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href=""> <img src="./img/logo.png" alt="">
+        </a>
+        <!-- 漢堡叉叉按鈕 + nav 選單 -->
+        <label>
+            <div class="hamburger">
+                <input type="checkbox" id="switch">
+                <div class="nav-btn">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+                <nav class="menu">
+                    <div class="login-box">
+                        <div class="login-box-img">
+                            <!-- <img src="./img/login.png" alt=""> -->
+                            <i class="fa-regular fa-circle-user fa-xl"></i>
+                            <a data-lang="login" href="./login.html">登入</a>
+                            <a href="">
+                                <p data-lang="register">免費開戶</p>
+                            </a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                </svg>
+                                <span data-lang="home">回首頁</span> </a>
+                        </li>
+                        <li>
+                            <a class="" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
+                                </svg><span data-lang="announcement">最新公告</span> </a>
+                        </li>
+                        <li>
+                            <a class="" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg><span data-lang="customerService">在線客服</span> </a>
+                        </li>
+
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-translate" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+                            </svg>
+                            <select name="" id="changeLang" onchange="changeLangFn()">
+                                <option value="zh_CN">简体中文</option>
+                                <option value="en_US">English</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a class="" href=""> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-laptop-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                                </svg><span data-lang="changeToDesktop">回電腦版</span></a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <div class="Shady">
+                </div>
+            </div>
+        </label>
+    </header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/swiper1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/swiper2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/swiper3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/swiper4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/swiper5.jpg" alt=""></div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <main>
+        <div class="main-box-nav">
+            <div class="container">
+                <div class="nav-box nav-box-hot">
+                    <img src="./img/nav1.png" alt="">
+                    <span data-lang="hot">熱門</span>
+                </div>
+                <div class="nav-box nav-box-elc">
+                    <img src="./img/nav2.png" alt="">
+                    <span data-lang="slot">電子</span>
+                </div>
+                <div class="nav-box nav-box-chess">
+                    <img src="./img/nav3.png" alt="">
+                    <span data-lang="cards">棋牌</span>
+                </div>
+                <div class="nav-box nav-box-fish">
+                    <img src="./img/nav4.png" alt="">
+                    <span data-lang="fish">捕魚</span>
+                </div>
+                <div class="nav-box nav-box-people">
+                    <img src="./img/nav5.png" alt="">
+                    <span data-lang="live">真人</span>
+                </div>
+                <div class="nav-box nav-box-lottery">
+                    <img src="./img/nav6.png" alt="">
+                    <span data-lang="lottery">彩票</span>
+                </div>
+
+                <div class="nav-box nav-box-sport">
+                    <img src="./img/nav7.png" alt="">
+                    <span data-lang="sports">體育</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-box" style="background-color: #D4CCB9;">
+            <div id="main-box-container" class="container" style="width: 100%; padding: 30px;">
+                <!-- <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <!-- hot-btn -->
+    <div class="hito-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />
+            <path fill-rule="evenodd"
+                d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+        </svg> <span data-lang="hotgame">熱門快選</span>
+    </div>
+
+    <div class="hot-box">
+        <div class="top-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                <path fill-rule="evenodd"
+                    d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg> <span data-lang="collapse">收起</span>
+        </div>
+        <div class="hot-box-top top-hot">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+            </svg>
+            <span data-lang="hot">熱門</span>
+        </div>
+        <div class="hot-box-top top-new">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star"
+                viewBox="0 0 16 16">
+                <path
+                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+            </svg><span data-lang="new">最新</span>
+        </div>
+        <div class="hot-box-top top-nice"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                <path
+                    d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+            </svg><span data-lang="best">最佳</span>
+        </div>
+
+        <div class="hot-box-nav">
+            <p class="hot-box-nav-p hot-box-nav-p1 PG">PG</p>
+            <p class="hot-box-nav-p TP">TP</p>
+            <p class="hot-box-nav-p PT">PT</p>
+            <p class="hot-box-nav-p NW">NW</p>
+            <p class="hot-box-nav-p MG">MG</p>
+            <p class="hot-box-nav-p KY">KY</p>
+            <p class="hot-box-nav-p JDB">JDB</p>
+            <p class="hot-box-nav-p FC">FC</p>
+            <p class="hot-box-nav-p CQ9">CQ9</p>
+            <p class="hot-box-nav-p BB">BB</p>
+            <p class="hot-box-nav-p AG">AG</p>
+        </div>
+        <div class="hot-box-main">
+            <!-- <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+           
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p>麻將胡了</p>
+            </div> -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-nav"
+            style="width: 100%;position: fixed;bottom: 0;right: 0;background: linear-gradient(to bottom, #faf8f3, #cfc8b9);">
+            <div class="row" style="width: 100%;margin: 0;">
+                <div class="col-3" style="text-align: center;padding: 10px 0;border-right: 2px solid #d8d2c546;">
+                    <a href=""
+                        style="color: #525252;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-cash" viewBox="0 0 16 16">
+                            <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                            <path
+                                d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+                        </svg>
+                        <span data-lang="financial">財務中心</span>
+                    </a>
+                </div>
+                <div class="col-3" style="text-align: center;padding: 10px 0;border-right: 2px solid #d8d2c546;">
+                    <a href=""
+                        style="color: #525252;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-gift-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
+                        </svg>
+                        <span data-lang="promotions">優惠專區</span>
+                    </a>
+                </div>
+                <div class="col-3" style="text-align: center;padding: 10px 0;border-right: 2px solid #d8d2c546;">
+                    <a href=""
+                        style="color: #525252;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                        </svg>
+                        <span data-lang="onlineChat">在線客服</span>
+                    </a>
+                </div>
+                <div class="col-3" style="text-align: center;padding: 10px 0;">
+                    <a href="./index.html"
+                        style="color: #525252;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                        </svg>
+                        <span data-lang="home">回首頁</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bookstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+
+    <!-- i18n-jquery -->
+    <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="lib/i18n/jquery.json.min.js"></script>
+    <script src="lib/i18n/jquery.i18n.properties.js"></script>
+
+    <script>
+        var LANGUAGE_CODE = "zh_CN"; //标识语言
+
+        // cookie name
+        var x = document.cookie;
+        console.log(x)
+        function parseCookie() {
+            var cookieObj = {};
+            var cookieAry = document.cookie.split(';');
+            var cookie;
+            for (var i = 0, l = cookieAry.length; i < l; ++i) {
+                cookie = jQuery.trim(cookieAry[i]);
+                cookie = cookie.split('=');
+                cookieObj[cookie[0]] = cookie[1];
+            }
+            return cookieObj;
+        }
+        function getCookieByName(name) {
+            var value = parseCookie()[name];
+            if (value) {
+                value = decodeURIComponent(value);
+            }
+            return value;
+        }
+        var aa = getCookieByName('language')
+        console.log(aa)
+
+
+
+        function loadProperties(type) {
+            jQuery.i18n.properties({
+                name: 'strings', // 资源文件名称
+                path: 'static/', // 资源文件所在目录路径
+                mode: 'map', // 模式：变量或 Map 
+                language: type, // 对应的语言
+                cache: false,
+                encoding: 'UTF-8',
+                callback: function () { // 回调方法    
+                    for (var i in $.i18n.map) {
+                        $('[data-lang="' + i + '"]').text($.i18n.map[i]);
+                    }
+                }
+            });
+        }
+
+        function changeLangFn() {
+            loadProperties($("#changeLang").val());
+
+            // cookie
+            var changeLang = document.querySelector("#changeLang")
+            document.cookie = ` language=${changeLang.value}`;
+            console.log(document.cookie);
+        }
+
+        $(document).ready(function () {
+            LANGUAGE_CODE = jQuery.i18n.normaliseLanguageCode({}); //获取浏览器的语言    
+            LANGUAGE_CODE = LANGUAGE_CODE == 'en_US' ? 'en_US' : 'zh_CN';
+            loadProperties(`${aa}`);
+            var changeLang = document.querySelector('#changeLang')
+            changeLang.value = `${aa}`
+        })
+
+    </script>
+
+
+
+    <script>
+        // nav-box
+        var navBoxHot = document.querySelector(".nav-box-hot")
+        var navBoxElc = document.querySelector(".nav-box-elc")
+        var navBoxChess = document.querySelector(".nav-box-chess")
+        var navBoxFish = document.querySelector(".nav-box-fish")
+        var navBoxPeople = document.querySelector(".nav-box-people")
+        var navBoxLottery = document.querySelector(".nav-box-lottery")
+        var navBoxSport = document.querySelector(".nav-box-sport")
+        var mainBoxContainer = document.querySelector("#main-box-container")
+
+        begin()
+
+        function begin() {
+            mainBoxContainer.innerHTML = ''
+            mainBoxContainer.innerHTML += `  <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a href="" style="text-decoration: none;position: relative;">
+                            <span class="hot"
+                                style="position: absolute;background-color: rgb(255, 208, 0);border-radius: 3px;height: 20px;width: 20px;color: red;font-weight: bolder;left: -30px;">熱</span>
+                            <img src="./img/pg05.png" alt="" style=" width: 60px;height: 60px;">
+                            <p data-lang="gameName" style="color: #86684A;">PG 麻將胡了</p>
+                        </a>
+                    </div>
+                </div>
+                `
+        }
+
+        navBoxHot.onclick = function () {
+            begin()
+            loadProperties($("#changeLang").val());
+        }
+        navBoxElc.onclick = function () {
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+            <div class="row">
+                <div class="col-4" style="text-align: center;">
+                    <a href="./TP-electronic.html" style="text-decoration: none;position: relative;">   
+                        <img src="./img/d50f077c86474d7eb54858eba5cad375.png" alt="" style=" width: 80px;">
+                        <p data-lang="gameNameSlot" style="color: #86684A;">TP-電子</p>
+                        </a>
+                        </div>
+                        
+                        </div>
+                        `
+            loadProperties($("#changeLang").val());
+        }
+        navBoxChess.onclick = function () {
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+                <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="./TP-electronic.html" style="text-decoration: none;position: relative;">   
+                            <img src="./img/d50f077c86474d7eb54858eba5cad375.png" alt="" style=" width: 80px;">
+                            <p data-lang="gameNameCards" style="color: #86684A;">TP-棋牌</p>
+                        </a>
+                    </div>
+                   
+                </div>`
+            loadProperties($("#changeLang").val());
+        }
+        navBoxFish.onclick = function () {
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+            <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="./TP-electronic.html" style="text-decoration: none;position: relative;">   
+                            <img src="./img/d50f077c86474d7eb54858eba5cad375.png" alt="" style=" width: 80px;">
+                            <p data-lang="gameNamefish" style="color: #86684A;">TP-捕魚</p>
+                        </a>
+                    </div>
+                   
+                </div>
+                `
+            loadProperties($("#changeLang").val());
+        }
+        navBoxPeople.onclick = function () {
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+            <div class="row">
+                    <div class="col-4" style="text-align: center;">
+                        <a href="./TP-electronic.html" style="text-decoration: none;position: relative;">   
+                            <img src="./img/d50f077c86474d7eb54858eba5cad375.png" alt="" style=" width: 80px;">
+                            <p data-lang="gameNameLive" style="color: #86684A;">TP-真人</p>
+                        </a>
+                    </div>
+                   
+                </div>
+                `
+            loadProperties($("#changeLang").val());
+        }
+        navBoxLottery.onclick = function () {
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+                `
+            loadProperties($("#changeLang").val());
+        }
+        navBoxSport.onclick = function () {
+
+            mainBoxContainer.innerHTML = ''
+            console.log("555")
+            mainBoxContainer.innerHTML += ` 
+            
+                `
+            loadProperties($("#changeLang").val());
+        }
+
+        // ------------------------------------------------------------------------------------------------
+        // hotbox
+        var hitoBtn = document.querySelector(".hito-btn")
+        var topBtn = document.querySelector(".top-btn")
+        var hotBox = document.querySelector(".hot-box")
+
+        // hotBox出現
+        hitoBtn.onclick = function () {
+            // console.log("111")
+            hotBox.style.display = 'block';
+            hitoBtn.style.display = 'none';
+        }
+        // hotBox消失
+        topBtn.onclick = function () {
+            // console.log("111")
+            hotBox.style.display = 'none'
+            hitoBtn.style.display = 'block'
+        }
+
+        // hot-Box-top
+        var topHot = document.querySelector(".top-hot")
+        var topNew = document.querySelector(".top-new")
+        var topNice = document.querySelector(".top-nice")
+        var hotBoxTops = document.querySelectorAll(".hot-box-top")
+
+        topHot.onclick = function () {
+            for (let i = 0; i < hotBoxTops.length; i++) {
+                hotBoxTops[i].style.backgroundColor = '#807f7f'
+                hotBoxTops[i].style.color = '#cac9c9'
+                topHot.style.backgroundColor = '#fcfbf9'
+                topHot.style.color = '#686868'
+            }
+        }
+        topNew.onclick = function () {
+            for (let i = 0; i < hotBoxTops.length; i++) {
+                hotBoxTops[i].style.backgroundColor = '#807f7f'
+                hotBoxTops[i].style.color = '#cac9c9'
+                topNew.style.backgroundColor = '#fcfbf9'
+                topNew.style.color = '#686868'
+            }
+        }
+        topNice.onclick = function () {
+            for (let i = 0; i < hotBoxTops.length; i++) {
+                hotBoxTops[i].style.backgroundColor = '#807f7f'
+                hotBoxTops[i].style.color = '#cac9c9'
+                topNice.style.backgroundColor = '#fcfbf9'
+                topNice.style.color = '#686868'
+            }
+        }
+
+        // -------------------------------------------------------------------------------------------------
+        // hotBox-nav
+        var hotBoxNavP1 = document.querySelector(".hot-box-nav-p1")
+        var hotBoxNavPs = document.querySelectorAll(".hot-box-nav-p")
+        var hotBoxNavNow = document.querySelector(".hot-box-nav-now")
+
+        hotBoxNavP1.classList.add("hot-box-nav-now")
+
+        // ---------------------------------------------------------------------------------
+        // hot-box-main
+        var PG = document.querySelector(".PG")
+        var TP = document.querySelector(".TP")
+        var PT = document.querySelector(".PT")
+        var NW = document.querySelector(".NW")
+        var MG = document.querySelector(".MG")
+        var KY = document.querySelector(".KY")
+        var JDB = document.querySelector(".JDB")
+        var FC = document.querySelector(".FC")
+        var CQ9 = document.querySelector(".CQ9")
+        var BB = document.querySelector(".BB")
+        var AG = document.querySelector(".AG")
+        var hotBoxMain = document.querySelector(".hot-box-main")
+
+
+        function begin2() {
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+        }
+        begin2()
+
+        PG.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            PG.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            begin2()
+            loadProperties($("#changeLang").val());
+        }
+        TP.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            TP.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        PT.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            PT.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        NW.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            NW.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div> 
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        MG.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            MG.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        KY.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            KY.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        JDB.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            JDB.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        FC.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            FC.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        CQ9.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            CQ9.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        BB.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            BB.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+        AG.onclick = function () {
+            hotBoxNavPs.forEach(function (hotBoxNavP) {
+                hotBoxNavP.classList.remove("hot-box-nav-now")
+            });
+            AG.classList.add("hot-box-nav-now")
+
+            hotBoxMain.innerHTML = ""
+            hotBoxMain.innerHTML += `
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            <div class="hot-box-col">
+                <img src="./img/pg05.png" alt="">
+                <p data-lang="gameName1">麻將胡了</p>
+            </div>
+            `
+            loadProperties($("#changeLang").val());
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font-awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #D8D1C1;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            position: relative;
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #D8D1C1;
+        }
+
+        .back {
+            position: relative;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 30px;
+            height: 30px;
+            background-color: #8B6E48;
+            border-radius: 50px;
+        }
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 2px;
+            background-color: #D8D1C1;
+        }
+
+        .line-1 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .line-2 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .container>i {
+            margin: 100px 0 50px 0;
+            font-size: 170px;
+            color: #8B6E48;
+        }
+
+        .member-info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .member-info input {
+            margin: 5px;
+            padding: 0 20px;
+            width: 230px;
+            height: 35px;
+            border: none;
+            border-radius: 50px;
+            background-color: #EBEBE2;
+            color: #8B6E48;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #8B6E48;
+        }
+
+        button {
+            margin: 5px;
+            padding: 0 20px;
+            width: 230px;
+            height: 35px;
+            border: none;
+            border-radius: 50px;
+            background-color: #EBEBE2;
+            color: #000;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer p {
+            padding: 0 8px;
+            font-size: 14px;
+            color: #8B6E48;
+            font-weight: bolder;
+
+        }
+
+        .footer p:nth-child(1),
+        .footer p:nth-child(2) {
+            border-right: 1.5px solid #8B6E48;
+        }
+
+        .container>p {
+            font-size: 12px;
+            color: #8B6E48;
+            font-weight: bolder;
+        }
+
+        .bi {
+            position: absolute;
+            color: #8B6E48;
+        }
+
+        .bi-person {
+            top: 14px;
+            right: 20px;
+        }
+
+        .bi-lock {
+            top: 59px;
+            right: 20px;
+        }
+
+        .bi-arrow-repeat {
+            top: 105px;
+            right: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="./index.html">
+            <div class="back">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
+        </a>
+        <i class="fa-regular fa-circle-user fa-xl"></i>
+        <div class="member-info">
+            <input id="account" type="text" data-lang="account" placeholder="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+            </svg>
+            <input id="password" type="text" data-lang="password" placeholder="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+            </svg>
+            <input id="checkCode" type="text" data-lang="checkCode" placeholder="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                <path
+                    d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                <path fill-rule="evenodd"
+                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+            </svg>
+            <button>
+                <span data-lang="login">登入</span>
+            </button>
+        </div>
+        <div class="footer">
+            <a href="">
+                <p>忘記密碼</p>
+            </a>
+            <a href="">
+                <p>免費開戶</p>
+            </a>
+            <a href="">
+                <p>免費試玩</p>
+            </a>
+        </div>
+        <p>Copyright @ 永利娛樂場 Reserved</p>
+    </div>
+</body>
+
+  <!-- i18n-jquery -->
+  <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="lib/i18n/jquery.json.min.js"></script>
+  <script src="lib/i18n/jquery.i18n.properties.js"></script>
+
+  <script>
+      var LANGUAGE_CODE = "zh_CN"; //标识语言
+
+      // cookie name
+      var x = document.cookie;
+      console.log(x)
+      function parseCookie() {
+          var cookieObj = {};
+          var cookieAry = document.cookie.split(';');
+          var cookie;
+          for (var i = 0, l = cookieAry.length; i < l; ++i) {
+              cookie = jQuery.trim(cookieAry[i]);
+              cookie = cookie.split('=');
+              cookieObj[cookie[0]] = cookie[1];
+          }
+          return cookieObj;
+      }
+      function getCookieByName(name) {
+          var value = parseCookie()[name];
+          if (value) {
+              value = decodeURIComponent(value);
+          }
+          return value;
+      }
+      var aa = getCookieByName('language')
+      console.log(aa)
+
+
+
+      function loadProperties(type) {
+          jQuery.i18n.properties({
+              name: 'strings', // 资源文件名称
+              path: 'static/', // 资源文件所在目录路径
+              mode: 'map', // 模式：变量或 Map 
+              language: type, // 对应的语言
+              cache: false,
+              encoding: 'UTF-8',
+              callback: function () { // 回调方法    
+                  for (var i in $.i18n.map) {
+                      $('[data-lang="' + i + '"]').text($.i18n.map[i]);
+                  }
+                  $("#account").attr("placeholder",$.i18n.prop("account"));
+                    $("#password").attr("placeholder",$.i18n.prop("password"));
+                    $("#checkCode").attr("placeholder",$.i18n.prop("checkCode"));
+              }
+          });
+      }
+
+      $(document).ready(function () {
+          LANGUAGE_CODE = jQuery.i18n.normaliseLanguageCode({}); //获取浏览器的语言    
+          LANGUAGE_CODE = LANGUAGE_CODE == 'en_US' ? 'en_US' : 'zh_CN';
+          loadProperties(`${aa}`);
+          var changeLang = document.querySelector('#changeLang')
+          changeLang.value = `${aa}`
+      })
+
+  </script>
+
+</html>
